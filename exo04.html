@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body { background-image: url("background.png");
+				background-repeat: no-repeat;
+			background-size: cover;
+			text-align: center;}
+.toy-card {
+    padding-top: 20px;
+	background : #FFF;
+	width: 250px;
+	height: 350px;
+	border-radius : 20px;
+    text-align : center;
+	transition: all 0.5s ;
+	display: inline-block;
+	margin: 40px;
+	vertical-align: middle;
+	margin-bottom: 50px;
+
+
+}
+.toy-card img {
+width : 120px ;
+height: 200px;
+transition: all 0.5s;
+margin-bottom: 20px;
+ }
+
+.toy-card:hover
+{
+    box-shadow: 1px 1px 12px #555;
+    transition: all 0.5s ;
+    opacity: 1;
+}
+
+.toy-card:hover img {
+    transform: scale(1.3) translate(-10px);
+    transition: all 0.5s ;
+    width: 150px;
+	height: 200px;
+}
+.toy-card__unit-stats
+{
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 20px;
+
+}
+.one-third
+{
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+	height: 50px;
+
+
+}
+
+
+.toy-card:hover  .toy-card__unit-stats
+{
+    opacity: 1;
+}
+#logo {
+
+
+}
+		#logo:hover img
+		{	transition: all 0.5s ease-in-out ;
+			transform: rotate(360deg);
+		}
+
+	</style>
+</head>
+<body>
+	<div id="logo">
+	<img src="logo.png" width="5%">
+	</div>
+
+</body>
+<script type="text/javascript">
+
+
+		var monTableau = [
+
+		{ "nom": "Woody", "vie": "25", "discretion": "22", "action": "40", "photo": "../images/woody.png", "info": "Les mains en l'air ! Le shérif Woody est la pour faire régner l ordre dans la chambre d'Andy." },
+
+{ "nom": "Buzz l'éclair", "vie": "35", "discretion": "15", "action": "70", "photo": "../images/buzz.png", "info": "Vers l'infini et au-delà !" },
+
+{ "nom": "Pil Poil", "vie": "14", "discretion": "10", "action": "60", "photo": "../images/pilpoil.png", "info": "Il cherche à éliminer le grand méchant Zurg. Buzz sait voler grâce à ses ailes déployables." },
+
+{ "nom": "Alien", "vie": "11", "discretion": "12", "action": "10", "photo": "../images/alien.png", "info": "Pas fufute mais très gentil" },
+
+{ "nom": "Rex", "vie": "40", "discretion": "24", "action": "50", "photo": "../images/rex.png", "info": "Tout dans les muscles !" },
+
+{ "nom": "Jessie", "vie": "37", "discretion": "45", "action": "65", "photo": "../images/jessie.png", "info": "Téméraire et intrépide ! " },
+
+{ "nom": "Sergent", "vie": "12", "discretion": "60", "action": "75", "photo": "../images/sergent.png", "info": "Au service de tous !" },
+
+{ "nom": "Bayonne", "vie": "25", "discretion": "30", "action": "20", "photo": "../images/bayonne.png", "info": "Tranquille et économe" },
+
+{ "nom": "ZigZag", "vie": "35", "discretion": "30", "action": "40", "photo": "../images/zigzag.png", "info": "Toujours prêt à se plier en 4 pour Woody" },
+
+{ "nom": "Monsieur Patate", "vie": "18", "discretion": "35", "action": "30", "photo": "../images/patate.png", "info": "Grincheux mais sympa" }
+
+	]
+	monTableau.forEach(function(cartestylax) {
+        document.body.innerHTML += "<div class='toy-card'><img class='image' src='" + cartestylax.photo + "'><h3>" + cartestylax.nom + "</h3><div class='toy-card__description'>" + cartestylax.info + "<div class='toy-card__unit-stats'><div class='one-third' style='border-bottom-left-radius: 20px'>Vie " + cartestylax.vie + "</div><div class='one-third'>discretion " + cartestylax.discretion + "</div><div class='one-third' style='border-bottom-right-radius: 20px'>action " + cartestylax.action + "</div></div></div> ";
+    });
+
+</script>
+</html>
